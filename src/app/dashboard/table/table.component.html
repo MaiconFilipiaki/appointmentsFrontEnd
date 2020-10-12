@@ -1,0 +1,17 @@
+<table mat-table [dataSource]="listAppointment" class="mat-elevation-z8">
+  <ng-container matColumnDef="medicName">
+    <th mat-header-cell *matHeaderCellDef> Name of medic </th>
+    <td mat-cell *matCellDef="let element"> {{element.medicName}} </td>
+  </ng-container>
+  <ng-container matColumnDef="customerName">
+    <th mat-header-cell *matHeaderCellDef> Name of customer </th>
+    <td mat-cell *matCellDef="let element"> {{element.customerName}} </td>
+  </ng-container>
+  <ng-container matColumnDef="dateFormatted">
+    <th mat-header-cell *matHeaderCellDef> Date of appointment </th>
+    <td mat-cell *matCellDef="let element"> {{element.dateFormatted}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

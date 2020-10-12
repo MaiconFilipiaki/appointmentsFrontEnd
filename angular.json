@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -92,6 +93,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "appointmentMedicalFrontEnd"
+    }
+  },
+  "defaultProject": "appointmentMedicalFrontEnd",
+  "cli": {
+    "analytics": "f2c9f3c5-3a0d-4b6e-ab45-f31330ba09e2"
+  }
 }

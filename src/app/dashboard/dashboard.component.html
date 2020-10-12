@@ -1,0 +1,18 @@
+<p>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row class="container-header">
+      <span>Appointment Medical</span>
+      <div class="container-button">
+        <button mat-icon-button class="favorite-icon" (click)="onAddAppointment()">
+          <mat-icon>add</mat-icon>
+        </button>
+        <button mat-icon-button (click)="onLogout()">
+          <mat-icon>login</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</p>
+<div class="container-table">
+  <app-table></app-table>
+</div>

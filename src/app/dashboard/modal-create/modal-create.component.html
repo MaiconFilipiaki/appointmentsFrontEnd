@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>Create Appointment</h2>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill" class="input-full-width">
+      <mat-label>Select Medic</mat-label>
+      <mat-select formControlName="medic" id="medic" name="medic">
+        <mat-option  *ngFor="let medicOp of listOfMedic" [value]="medicOp.id">
+          {{medicOp.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="input-full-width">
+      <mat-label>Select kind of user</mat-label>
+      <mat-select formControlName="customer" id="customer" name="customer">
+        <mat-option  *ngFor="let custumerOp of listOfCustomer" [value]="custumerOp.id">
+          {{custumerOp.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        [ngxMatDatetimePicker]="picker"
+        placeholder="Choose a date"
+        formControlName="date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <ngx-mat-datetime-picker #picker >
+      </ngx-mat-datetime-picker>
+    </mat-form-field>
+    <mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close>Cancel</button>
+      <button type="submit" mat-button [mat-dialog-close]="true" cdkFocusInitial>Save</button>
+    </mat-dialog-actions>
+  </form>
+</mat-dialog-content>
+
